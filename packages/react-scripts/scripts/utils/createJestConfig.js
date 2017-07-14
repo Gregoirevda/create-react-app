@@ -38,6 +38,7 @@ module.exports = (resolve, rootDir, isEjecting) => {
         : resolve('config/jest/babelTransform.js'),
       '^.+\\.css$': resolve('config/jest/cssTransform.js'),
       '^(?!.*\\.(js|jsx|css|json)$)': resolve('config/jest/fileTransform.js'),
+      '\\.(graphql|gql)$': 'jest-transform-graphql'
     },
     transformIgnorePatterns: ['[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$'],
     moduleNameMapper: {
